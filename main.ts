@@ -5,11 +5,9 @@ function Start () {
         pause(1000)
         myCounter.count += 1
     }
+    music.play(music.stringPlayable("C F A F A C C5 F ", 120), music.PlaybackMode.UntilDone)
     Try = game.ask("It’s over do you want to restart")
-    Res(Try)
-}
-function Res (list: string) {
-    if (list == "True") {
+    if (Try == true) {
         game.reset()
     } else {
         game.gameOver(false)
